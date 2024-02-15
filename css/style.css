@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Open+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300..700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --ls: 'League Spartan', sans-serif;
+    --qs: "Quicksand", sans-serif;
+    --ms: 'Montserrat', sans-serif;
+    --os: 'Open Sans', sans-serif;
+    --pfd: 'Playfair Display', serif;
+    --pp: 'Poppins', sans-serif;
+    --rlw: 'Raleway', sans-serif;
+    --mono: "IBM Plex Mono", monospace;
+    --onScroll: #c748ee;
+}
+
+html,body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+#web-container {
+    min-height: 100%;
+    position: relative;
+}
+
+header,footer {
+    position: absolute;
+}
+
+/* header normal */
+header{
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    min-height: 60px;
+    background: transparent;
+    transition: 0.3s ease;
+    z-index: 1;
+}
+/* header normal */
+
+/* header ketika page tidak berada tepat di atas */
+header.onScroll {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: rgba(248, 247, 245, 0.95);
+    backdrop-filter: blur(5px);
+}
+/* header ketika page tidak berada tepat di atas */
+
+.use-container {
+    width: 80%;
+    margin-inline: auto;
+}
+
+section#hero div.use-container {
+    display: flex;
+    flex-direction: column;
+    min-height: inherit;
+    position: relative;
+    justify-content: center;
+}
+
+section#hero div.use-container h2 {
+    font-family: var(--mono);
+    font-weight: 400;
+    color: #fbfbfb;
+    font-size: 2.3em;
+}
+
+section#hero div.use-container h2 span.blink-cursor {
+    display: inline-block;
+    width: 0.1em;
+    height: 1em;
+    background-color: #252525;
+    animation: blink .7s infinite;
+}
+
+section#konten {
+    padding-bottom: 160px;
+    padding-top: 60px;
+}
+
+section#konten h3 {
+    font-size: 2.4em;
+    text-align: center;
+    font-family: var(--qs);
+    color: #222222;
+    font-weight: 300;
+}
+
+section#konten .container-grid input::-webkit-outer-spin-button,
+section#konten .container-grid input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+section#konten .container-grid input {
+    padding: 20px 25px 20px 0px;
+    box-sizing: border-box;
+    font-family: var(--mono);
+    color: #666666;
+    border-radius: 9999px;
+    -moz-appearance: textfield;
+    width: 100%;
+    outline: none;
+    border: 1px solid #c2c2c2;
+}
+
+div.input-container {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+
+div.input-symbol {
+    background-color: #c748ee;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    aspect-ratio: 1/1;
+    border-top-left-radius: 9999px;
+    display: grid;
+    place-items: center;
+    font-size: 1.2em;
+    color: #fbfbfb;
+    font-family: var(--pp);
+    border-bottom-left-radius: 9999px;
+}
+
+section#konten .container-grid input::placeholder,
+section#konten .container-grid textarea::placeholder {
+    color: #c2c2c2;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-family: var(--mono);
+}
+
+.container-grid > div:nth-child(6),
+.container-grid > div:last-child,
+.container-grid > div:first-child {
+    grid-column: span 2;
+}
+
+.container-grid > div:nth-child(6) {
+    display: none;
+}
+
+.container-grid > div.penjelasan_ {
+    display: flex;
+    row-gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-grid > div:nth-child(6) > textarea {
+    width: inherit;
+    resize: none;
+    border-radius: 25px;
+    color: #666666;
+    padding: 25px;
+    border: 1px solid #c2c2c2;
+    outline: none;
+}
+
+.container-grid > div:nth-child(6) > textarea {
+    font-size: 1.1rem;
+}
+
+.container-grid > div:nth-child(6) > div {
+    width: inherit;
+    text-transform: capitalize;
+    background-color: #c748ee;
+    padding: 10px;
+    border-radius: 9999px;
+    color: #fbfbfb;
+    font-family: var(--mono);
+    font-size: 1.1rem;
+    line-height: 0;
+    text-align: center;
+}
+
+big i, big {
+    color: #c748ee;
+    cursor: pointer;
+}
+
+.f-to-c, .c-to-f {
+    display: none;
+}
+
+.button-container {
+    display: flex; 
+    justify-content: center; 
+    gap: 4px;
+    margin-block: 10px;
+}
+
+.button-container button {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    color: #fbfbfb;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: .365rem .70rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    background-color: #c748ee;
+    width: fit-content;
+    text-transform: capitalize;
+    font-family: var(--mono);
+}
+
+section#konten .container-grid input:focus {
+    outline: none;
+}
+
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.typing-animation {
+    color: #252525;
+}
+
+@keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+header > div.use-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#links {
+    display: flex;
+}
+
+
+header .use-container button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+header .use-container button div {
+    width: 30px;
+    height: 2px;
+    border-radius: 9999px;
+    background: #fbfbfb;
+    transition: all 0.3s ease;
+}
+
+.crossed div:first-child {
+    transform-origin: 0 0;
+    transform: rotate(45deg) translate(-4px, -1px) !important;
+}
+
+.crossed div:nth-child(2) {
+    opacity: 0 !important;
+}
+
+.crossed div:last-child {
+    transform-origin: 0 100%;
+    transform: rotate(-45deg) translate(-4px, 0) !important
+}
+
+header #links a::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: 0.4s ease;
+}
+
+header #links a::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: 0.4s ease;
+    transition-delay: 0.4s;
+}
+
+h1.webpage-brand {
+    color: #252525;
+    font-family: var(--ls);
+}
+
+h1.webpage-brand > span {
+    color: #fbfbfb;
+}
+
+header.onScroll h1.webpage-brand > span {
+    color: #c748ee;
+}
+
+header.onScroll #links a {
+    color: #c748ee !important;
+}
+
+section#hero {
+    min-height: 100vh;
+    background: #c748ee;
+    position: relative;
+}
+
+section#hero svg {
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    left: 0;
+}
+
+header:not(header.onScroll) #links a:hover {
+    color: #c748ee !important;
+    transition-delay: 0.4s !important;
+}
+
+header:not(header.onScroll) #links a::before {
+    background-color: #fbfbfb !important;
+}
+
+header:not(header.onScroll) #links a::after {
+    background-color: #fbfbfb !important;
+}
+
+section#hero div.use-container a {
+    width: fit-content;
+}
+
+a .button-link {
+    background: #fbfbfb;
+    cursor: pointer;
+    border: none;
+    padding: .7em 2em;
+    border-radius: 9999px;
+    font-family: var(--mono);
+    font-size: 1em;
+    color: #252525;
+    
+}
+
+main {
+    padding-bottom: 60px;
+}
+
+@media (max-width: 575px) {
+    .container-grid div {
+        grid-column: span 2;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .use-container {
+        width: 90%;
+    }
+
+    header #links {
+        position: absolute;
+        top: 70px;
+        border-radius: 5px;
+        display: flex;
+        transition: 0.3s ease;
+        transform: scaleY(0);
+        transform-origin: top;
+        flex-direction: column;
+        right: 40px;
+        width: fit-content;
+        height: fit-content;
+        padding-block: 20px;
+        background-color: white;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+    header .smallerDeviceMenu {
+        transform-origin: top !important;
+        transform: scaleY(1) !important;
+        transition: 0.2s ease !important;
+    }
+
+    header #links a {
+        padding: 10px 30px;
+        text-decoration: none;
+        font-family: var(--ms);
+        font-size: 1em;
+        font-weight: 600;
+        color: #c748ee;
+    }
+}
+
+@media (min-width: 768px) {
+    header .use-container button {
+        display: none !important;
+    }
+    header > div.use-container > #links a {
+        color: #fbfbfb;
+        text-decoration: none;
+        font-family: var(--ms);
+        font-size: 1em;
+        padding-inline: 12px;
+        font-weight: 600;
+        padding-block: 8px;
+        position: relative;
+        z-index: 1;
+        transition: 0.4s ease;
+        transition-delay: 0s;
+    }
+    
+    
+    header.onScroll #links a:hover {
+        color: #fbfbfb !important;
+        transition-delay: 0.4s !important;
+    }
+    
+    header.onScroll #links a::before {
+        background-color: #c748ee;
+    }
+    
+    header #links a:hover::before {
+        transform: scaleY(1);
+        transform-origin: bottom;
+        transition-delay: 0.4s;
+    }
+    
+    header.onScroll #links a::after {
+        background-color: #c748ee;
+    }
+    
+    header #links a:hover::after {
+        transform: scaleX(1);
+        transform-origin: center;
+        transition-delay: 0s;
+    }
+    
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .use-container {
+        width: 85%;
+    }
+}
+
+footer {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f8f7f5;
+}
+
+footer div.use-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+footer div.use-container p {
+    color: #858585;
+    font-family: var(--ls);
+}
+
+footer div.use-container p span {
+    color: #c748ee;
+    font-weight: 600;
+}
+
+footer div.use-container p span > span {
+    color: #252525;
+}

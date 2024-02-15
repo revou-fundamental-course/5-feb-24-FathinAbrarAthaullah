@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>tempconverter - RevoU Fundamental</title>
+</head>
+<body>
+    <div id="web-container">
+        <header>
+            <div class="use-container">
+                <h1 class="webpage-brand"><span>temp</span>converter.</h1>
+                <div id="links">
+                    <a href="#konten">Konversi</a>
+                    <a href="#konten">Hasil Konversi</a>
+                    <a href="#rumus">Cara & Rumus</a>
+                </div>
+                <button>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+            </div>
+        </header>
+        <main>
+            <section id="hero">
+                <div class="use-container">
+                    <h2>Kami konversi, <br> <span class="typing-animation"></span><span class="blink-cursor"></span></h2>
+                    <a href="#konten"><button class="button-link">Mulai Konversi</button></a>
+                </div>
+                <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 170" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(255, 255, 255, 1)" offset="0%"></stop><stop stop-color="rgba(255, 255, 255, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,34L80,48.2C160,62,320,91,480,87.8C640,85,800,51,960,36.8C1120,23,1280,28,1440,36.8C1600,45,1760,57,1920,53.8C2080,51,2240,34,2400,22.7C2560,11,2720,6,2880,19.8C3040,34,3200,68,3360,79.3C3520,91,3680,79,3840,73.7C4000,68,4160,68,4320,76.5C4480,85,4640,102,4800,104.8C4960,108,5120,96,5280,76.5C5440,57,5600,28,5760,34C5920,40,6080,79,6240,87.8C6400,96,6560,74,6720,70.8C6880,68,7040,85,7200,87.8C7360,91,7520,79,7680,82.2C7840,85,8000,102,8160,116.2C8320,130,8480,142,8640,121.8C8800,102,8960,51,9120,34C9280,17,9440,34,9600,36.8C9760,40,9920,28,10080,45.3C10240,62,10400,108,10560,116.2C10720,125,10880,96,11040,76.5C11200,57,11360,45,11440,39.7L11520,34L11520,170L11440,170C11360,170,11200,170,11040,170C10880,170,10720,170,10560,170C10400,170,10240,170,10080,170C9920,170,9760,170,9600,170C9440,170,9280,170,9120,170C8960,170,8800,170,8640,170C8480,170,8320,170,8160,170C8000,170,7840,170,7680,170C7520,170,7360,170,7200,170C7040,170,6880,170,6720,170C6560,170,6400,170,6240,170C6080,170,5920,170,5760,170C5600,170,5440,170,5280,170C5120,170,4960,170,4800,170C4640,170,4480,170,4320,170C4160,170,4000,170,3840,170C3680,170,3520,170,3360,170C3200,170,3040,170,2880,170C2720,170,2560,170,2400,170C2240,170,2080,170,1920,170C1760,170,1600,170,1440,170C1280,170,1120,170,960,170C800,170,640,170,480,170C320,170,160,170,80,170L0,170Z"></path></svg>
+            </section>
+
+            <section id="konten">
+                <div class="use-container">
+                    <h3>Konversi sekarang</h3>
+                    <form class="container-grid" action="" method="POST">
+                        <div>
+                            <center>
+                                <big><i class="ri-arrow-left-right-line"></i></big>
+                            </center>
+                        </div>
+                        <div class="input-container c_to_f">
+                            <input type="number" name="" id="" class="input-celsius" placeholder="Celsius">
+                            <div class="input-symbol">&deg;C</div>
+                        </div>
+                        <div class="input-container c_to_f">
+                            <input type="number" name="" id="" class="input-fahrenheit" readonly placeholder="Fahrenheit">
+                            <div class="input-symbol">&deg;F</div>
+                        </div>
+                        <div class="input-container f_to_c f-to-c">
+                            <input type="number" name="" id="" class="input-fahrenheit" placeholder="Fahrenheit">
+                            <div class="input-symbol">&deg;F</div>
+                        </div>
+                        <div class="input-container f_to_c f-to-c">
+                            <input type="number" name="" readonly id="" class="input-celsius" placeholder="Celsius">
+                            <div class="input-symbol">&deg;C</div>
+                        </div>
+                        <div id="rumus">
+                            <div>
+                                <h4>Cara & rumus</h4>
+                            </div>
+                            <textarea name="" readonly id="" placeholder="Cara konversi akan ditampilkan di sini." class="penjelasan" cols="30" rows="4"></textarea>
+                            <textarea name="" readonly id="" placeholder="Rumus konversi akan ditampilkan di sini." class="conversion-formula" cols="30" rows="5">Celsius -> Fahrenheit: °F = (°C × 9/5) + 32
+Fahrenheit -> Celsius: °C = (°F - 32) × 5/9
+                            </textarea>
+                        </div>
+                        <div class="button-container">
+                            <button type="reset">reset</button>
+                            <button type="button" id="btnExplain"></button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="use-container">
+                <p>
+                    &copy; <script>document.write(new Date().getFullYear());</script> <span>temp<span>converter.</span></span> All Rights Reserved.
+                </p>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
